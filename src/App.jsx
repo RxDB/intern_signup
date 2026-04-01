@@ -4,6 +4,7 @@ import TextInput from "./common/TextInput/TextInput";
 import Button from "./common/Button/Button";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const illustrationPath = `${import.meta.env.BASE_URL}Illustration.png`;
 
 const App = () => {
   const initialFormData = {
@@ -162,7 +163,7 @@ const App = () => {
           </div>
 
           <div className={styles.illustration}>
-            <img src="/Illustration.png" alt="illustration" />
+            <img src={illustrationPath} alt="illustration" />
           </div>
         </div>
       ) : (

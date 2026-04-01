@@ -2,6 +2,9 @@ import { useState } from "react";
 import styles from "./App.module.css";
 import TextInput from "./common/TextInput/TextInput";
 import Button from "./common/Button/Button";
+
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 const App = () => {
   const initialFormData = {
     firstName: "",
@@ -45,15 +48,15 @@ const App = () => {
   const validateForm = () => {
     const newErrors = {};
 
-    if (!formData.firstName.trim()) {
+    if (changePage && !formData.firstName.trim()) {
       newErrors.firstName = "First Name is required";
     }
-    if (!formData.lastName.trim()) {
+    if (changePage && !formData.lastName.trim()) {
       newErrors.lastName = "Last Name is required";
     }
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
-    } else if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(formData.email)) {
+    } else if (!emailPattern.test(formData.email)) {
       newErrors.email = "Enter a valid email address";
     }
     if (!formData.password.trim()) {
@@ -61,9 +64,12 @@ const App = () => {
     } else if (formData.password.length < 8) {
       newErrors.password = "Password length should be atleast 8";
     }
-    if (!formData.confirmPassword.trim()) {
+    if (changePage && !formData.confirmPassword.trim()) {
       newErrors.confirmPassword = "Confirm password is required";
-    } else if (formData.password != formData.confirmPassword) {
+    } else if (
+      changePage &&
+      formData.password !== formData.confirmPassword
+    ) {
       newErrors.confirmPassword = "Passwords don't match";
     }
     return newErrors;
@@ -76,7 +82,15 @@ const App = () => {
           <div className={styles.left}>
             <div className={styles.top}>
               <h1 className={styles.title}>Create a account</h1>
-              <div>If you already have an account log in</div>
+              <div className={styles.underline}>
+                If you already have an account{" "}
+                <span
+                  
+                  onClick={() => setChangePage(false)}
+                >
+                  log in
+                </span>
+              </div>
             </div>
 
             <form onSubmit={handleSubmit} className={styles.createForm}>
@@ -137,7 +151,7 @@ const App = () => {
               <div
                 className={`${styles.route} ${styles.underline}`}
                 onClick={() =>
-                  changePage ? setChangePage(false) : setChangePage(true)
+                   setChangePage(false) 
                 }
               >
                 <span >log in instead</span>
@@ -198,7 +212,7 @@ const App = () => {
               <div
                 className={`${styles.routeLogin} ${styles.underline}`}
                 onClick={() =>
-                  changePage ? setChangePage(false) : setChangePage(true)
+                  setChangePage(true)
                 }
               >
                 <span>Sign up</span>

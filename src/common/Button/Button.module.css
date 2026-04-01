@@ -1,0 +1,18 @@
+
+.button button{
+    background-color: var(--content-grey-transparent);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    border: 0;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    font: inherit;
+    color: var(--content-white);
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+}
+
+.button button:hover{
+   transform: translateY(-2px);
+}

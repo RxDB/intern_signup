@@ -3,6 +3,7 @@ import styles from "./SignupPage.module.css";
 import TextInput from "../../common/TextInput/TextInput";
 import Button from "../../common/Button/Button";
 import { Link } from "react-router-dom";
+import {useNavigate} from "react-router-dom"
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const illustrationPath = `${import.meta.env.BASE_URL}Illustration.png`;
@@ -20,6 +21,8 @@ const SignupPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState(initialFormData);
   const [errors, setErrors] = useState({});
+
+  const navigate = useNavigate();
 
   const handleFormChange = (e) => {
     const { name, value } = e.target;
@@ -45,6 +48,7 @@ const SignupPage = () => {
     }
     console.log(formData);
     setFormData(initialFormData);
+    navigate("/homepage")
   };
 
   const validateForm = () => {

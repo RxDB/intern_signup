@@ -3,7 +3,13 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  padding: 1.5rem;
+  background-color: #f3f6fb;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 .main {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -16,7 +22,8 @@
   /* max-height: 600px;
   max-width: 900px; */
   box-shadow: var(--box-shadow-main);
-  margin: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
 }
 
 .title {
@@ -58,7 +65,7 @@
 @media (max-width: 768px) {
   .main {
     grid-template-columns: 1fr;
-    padding: 0rem;
+    padding: 1.5rem;
   }
   .illustration {
     display: none;

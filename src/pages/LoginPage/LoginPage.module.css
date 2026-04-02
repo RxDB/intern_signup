@@ -3,29 +3,27 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 1.5rem;
+  background-color: #f3f6fb;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 .left {
   display: flex;
   border: 2px solid var(--content-grey-transparent);
   width: min(100%, 600px);
-
-  /* max-height: 600px;
-  min-width: 800px; */
   justify-content: center;
   border-radius: 1rem;
   padding: 3rem 5rem 3rem 5rem;
   gap: 1rem;
   box-shadow: var(--box-shadow-main);
   flex-direction: column;
-
-  margin: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
 }
-/* .left {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-} */
+
 .title {
   color: var(--content-black);
 }
@@ -36,7 +34,6 @@
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-  /* min-width: 600px; */
 }
 
 .route {
@@ -67,4 +64,10 @@
 .signupLink {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .left {
+    padding: 2rem 1.5rem;
+  }
 }

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const illustrationPath = `${import.meta.env.BASE_URL}Illustration.png`;
+const backgroundImagePath = `${import.meta.env.BASE_URL}meshunsplash.jpg`;
 
 const SignupPage = () => {
   const initialFormData = {
@@ -74,7 +75,10 @@ const SignupPage = () => {
   };
 
   return (
-    <div className={styles.page}>
+    <div
+      className={styles.page}
+      style={{ backgroundImage: `url("${backgroundImagePath}")` }}
+    >
       <div className={styles.main}>
         <div className={styles.left}>
           <div className={styles.top}>
@@ -137,7 +141,7 @@ const SignupPage = () => {
               Show Password
             </div>
             <div className={styles.loginLink}>
-            <Link to="/login">Log in instead</Link>
+              <Link to="/login">Log in instead</Link>
             </div>
             <Button type="submit" name="Create Account" />
           </form>

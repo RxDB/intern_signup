@@ -74,74 +74,78 @@ const SignupPage = () => {
   };
 
   return (
-    <div className={styles.main}>
-      <div className={styles.left}>
-        <div className={styles.top}>
-          <h1 className={styles.title}>Create a account</h1>
-          <span>
-            If you already have account <Link to="/login"> login</Link>
-          </span>
+    <div className={styles.page}>
+      <div className={styles.main}>
+        <div className={styles.left}>
+          <div className={styles.top}>
+            <h1 className={styles.title}>Create a account</h1>
+            <span>
+              If you already have account <Link to="/login"> login</Link>
+            </span>
+          </div>
+
+          <form onSubmit={handleSubmit} className={styles.createForm}>
+            <TextInput
+              name="firstName"
+              label="First Name"
+              type="text"
+              value={formData.firstName}
+              onChange={handleFormChange}
+              error={errors.firstName}
+            />
+            <TextInput
+              name="lastName"
+              label="Last Name"
+              value={formData.lastName}
+              onChange={handleFormChange}
+              error={errors.lastName}
+            />
+            <TextInput
+              name="email"
+              label="Email address"
+              value={formData.email}
+              onChange={handleFormChange}
+              type="email"
+              className={styles.fullWidth}
+              error={errors.email}
+            />
+            <TextInput
+              name="password"
+              label="Enter Password"
+              value={formData.password}
+              onChange={handleFormChange}
+              type={showPassword ? "text" : "password"}
+              error={errors.password}
+            />
+            <TextInput
+              name="confirmPassword"
+              label="Confirm Password"
+              value={formData.confirmPassword}
+              onChange={handleFormChange}
+              type={showPassword ? "text" : "password"}
+              error={errors.confirmPassword}
+            />
+
+            <div className={styles.checkBox}>
+              <input
+                name="showPwd"
+                type="checkbox"
+                onChange={() =>
+                  showPassword ? setShowPassword(false) : setShowPassword(true)
+                }
+              ></input>
+              Show Password
+            </div>
+            <div className={styles.loginLink}>
+            <Link to="/login">Log in instead</Link>
+            </div>
+            <Button type="submit" name="Create Account" />
+          </form>
         </div>
 
-        <form onSubmit={handleSubmit} className={styles.createForm}>
-          <TextInput
-            name="firstName"
-            label="First Name"
-            type="text"
-            value={formData.firstName}
-            onChange={handleFormChange}
-            error={errors.firstName}
-          />
-          <TextInput
-            name="lastName"
-            label="Last Name"
-            value={formData.lastName}
-            onChange={handleFormChange}
-            error={errors.lastName}
-          />
-          <TextInput
-            name="email"
-            label="Email address"
-            value={formData.email}
-            onChange={handleFormChange}
-            type="email"
-            className={styles.fullWidth}
-            error={errors.email}
-          />
-          <TextInput
-            name="password"
-            label="Enter Password"
-            value={formData.password}
-            onChange={handleFormChange}
-            type={showPassword ? "text" : "password"}
-            error={errors.password}
-          />
-          <TextInput
-            name="confirmPassword"
-            label="Confirm Password"
-            value={formData.confirmPassword}
-            onChange={handleFormChange}
-            type={showPassword ? "text" : "password"}
-            error={errors.confirmPassword}
-          />
-
-          <div className={styles.checkBox}>
-            <input
-              name="showPwd"
-              type="checkbox"
-              onChange={() =>
-                showPassword ? setShowPassword(false) : setShowPassword(true)
-              }
-            ></input>
-            Show Password
-          </div>
-          <Button type="submit" name="Create Account" />
-          <Link to="/login">Log in</Link>
-        </form>
-      </div>
-
-      <div className={styles.illustration}>
-        <img src={illustrationPath} alt="illustration" />
+        <div className={styles.illustration}>
+          <img src={illustrationPath} alt="illustration" />
+        </div>
       </div>
     </div>
   );

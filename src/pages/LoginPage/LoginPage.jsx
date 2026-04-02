@@ -63,7 +63,8 @@ const LoginPage = () => {
   };
 
   return (
-    <div className={styles.login}>
+    <div className={styles.page}>
+    
       <div className={styles.left}>
         <div className={styles.top}>
           <h1 className={styles.title}>Login</h1>
@@ -102,7 +103,7 @@ const LoginPage = () => {
               <span> Terms of use </span> and
               <span> Privacy Policy</span>
             </div>
-            <Button type="submit" name="Create Account" />
+            <Button type="submit" name="Login" />
           </div>
 
           <div className={styles.signupLink}>
@@ -110,6 +111,7 @@ const LoginPage = () => {
           </div>
         </form>
       </div>
+    
     </div>
   );
 };

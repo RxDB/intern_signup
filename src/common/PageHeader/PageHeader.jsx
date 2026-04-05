@@ -1,0 +1,70 @@
+import styles from "./PageHeader.module.css";
+import homeIcon from "../../assets/home.svg";
+import peopleIcon from "../../assets/people.svg";
+import suitcaseIcon from "../../assets/suitcase.svg";
+import chatIcon from "../../assets/chat.svg";
+import bellIcon from "../../assets/bell.svg";
+import fourIcon from "../../assets/four.svg";
+import linked from "../../assets/linkedin.png";
+import dark from "../../assets/dark.svg";
+import Button from "../../common/Button/Button.jsx";
+
+const PageHeader = () => {
+  return (
+    <header className={styles.header}>
+      <div className={styles.leftIcons}>
+        <div className={styles.linked}>
+          <img src={linked} alt="LinkedIn" />
+        </div>
+        <div className={styles.darkMode}>
+          <img src={dark} alt="Toggle theme" />
+        </div>
+      </div>
+      <div className={styles.centerSection}>
+        <label className={styles.searchWrapper}>
+          <span className={styles.srOnly}>Search</span>
+          <input
+            placeholder="Search"
+            className={styles.search}
+            type="search"
+            aria-label="Search"
+          />
+        </label>
+        <nav className={styles.centerIcons} aria-label="Primary">
+          <Button name="Work" type="button" icon={homeIcon} className={styles.navI} />
+          <Button
+            name="My network"
+            type="button"
+            icon={peopleIcon}
+            className={styles.navI}
+          />
+          <Button name="Jobs" type="button" icon={suitcaseIcon} className={styles.navI} />
+        </nav>
+      </div>
+      <div className={styles.rightIcons}>
+        <Button
+          name=""
+          type="button"
+          icon={bellIcon}
+          className={styles.navI}
+          ariaLabel="Notifications"
+        />
+        <Button
+          name=""
+          type="button"
+          icon={chatIcon}
+          className={styles.navI}
+          ariaLabel="Messages"
+        />
+        <Button
+          name=""
+          type="button"
+          icon={fourIcon}
+          className={styles.navI}
+          ariaLabel="Apps"
+        />
+      </div>
+    </header>
+  );
+};
+export default PageHeader;

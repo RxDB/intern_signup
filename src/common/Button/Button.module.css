@@ -1,23 +1,20 @@
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  border: 0;
+  /* 
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: inherit; */
+  /* color: var(--content-white); */
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
 
-.button button{
-    background-color: var(--content-grey-transparent);
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
-    border: 0;
-
-    font-size: 1.5rem;
-    font-weight: 600;
-    font: inherit;
-    color: var(--content-white);
-    cursor: pointer;
-    box-shadow: var(--box-shadow);
-
-    transition: 0.3s;
+  transition: 0.3s;
 }
 
-button:hover {
-    transform: translateY(-2px);
-  background-color: #3b82f6;
-  box-shadow: 0 0 0 5px #3b83f65f;
-  color: #fff;
+.icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }

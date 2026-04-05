@@ -144,7 +144,7 @@ const SignupPage = () => {
             <div className={styles.loginLink}>
               <Link to="/login">Log in instead</Link>
             </div>
-            <Button type="submit" name="Create Account" />
+            <Button type="submit" name="Create Account" className={styles.login}/>
           </form>
         </div>
 

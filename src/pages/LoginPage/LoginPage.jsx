@@ -107,7 +107,7 @@ const LoginPage = () => {
               <span> Terms of use </span> and
               <span> Privacy Policy</span>
             </div>
-            <Button type="submit" name="Login" />
+            <Button type="submit" name="Login" className={styles.login} />
           </div>
 
           <div className={styles.signupLink}>

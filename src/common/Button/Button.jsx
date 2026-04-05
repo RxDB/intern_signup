@@ -1,9 +1,12 @@
 import styles from "./Button.module.css";
 
-const Button = ({type, name}) => {
+const Button = ({ type, name, className, icon, ariaLabel }) => {
   return (
-    <div className={styles.button}>
-      <button type={type}>{name}</button>
+    <div className={className}>
+      <button type={type} className={styles.button} aria-label={ariaLabel}>
+        {icon && <img src={icon} alt="" className={styles.icon} />}
+        {name}
+      </button>
     </div>
   );
 };

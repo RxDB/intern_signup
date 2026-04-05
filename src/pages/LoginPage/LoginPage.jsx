@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const backgroundImagePath = `${import.meta.env.BASE_URL}meshunsplash.jpg`;
+// const backgroundImagePath = `${import.meta.env.BASE_URL}meshunsplash.jpg`;
 
 const LoginPage = () => {
   const initialFormData = {
@@ -68,10 +68,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div
-      className={styles.page}
-      style={{ backgroundImage: `url("${backgroundImagePath}")` }}
-    >
+    <div className={styles.page}>
       <div className={styles.left}>
         <div className={styles.top}>
           <h1 className={styles.title}>Login</h1>

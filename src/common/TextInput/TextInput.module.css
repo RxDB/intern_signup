@@ -8,21 +8,21 @@
 
 .inputField input {
   width: 100%;
-  border: 2px solid var(--content-grey-transparent);
+  border: 1px solid var(--content-grey-transparent);
 
   padding: 0.8rem 0.3rem;
   color: var(--content-grey);
 
   background-color: #eee;
 
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
 
-  box-shadow: 0 0.4rem #dfd9d9;
+  box-shadow: var(--box-shadow);
 }
 
 .inputField input:focus {
   outline: none;
-  border: 2px solid var(--content-black);
+  border: 1px solid var(--content-black);
 }
 
 .error {

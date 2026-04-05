@@ -3,11 +3,11 @@ import styles from "./SignupPage.module.css";
 import TextInput from "../../common/TextInput/TextInput";
 import Button from "../../common/Button/Button";
 import { Link } from "react-router-dom";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const illustrationPath = `${import.meta.env.BASE_URL}Illustration.png`;
-const backgroundImagePath = `${import.meta.env.BASE_URL}meshunsplash.jpg`;
+// const backgroundImagePath = `${import.meta.env.BASE_URL}meshunsplash.jpg`;
 
 const SignupPage = () => {
   const initialFormData = {
@@ -48,7 +48,7 @@ const SignupPage = () => {
     }
     console.log(formData);
     setFormData(initialFormData);
-    navigate("/homepage")
+    navigate("/homepage");
   };
 
   const validateForm = () => {
@@ -79,10 +79,7 @@ const SignupPage = () => {
   };
 
   return (
-    <div
-      className={styles.page}
-      style={{ backgroundImage: `url("${backgroundImagePath}")` }}
-    >
+    <div className={styles.page}>
       <div className={styles.main}>
         <div className={styles.left}>
           <div className={styles.top}>

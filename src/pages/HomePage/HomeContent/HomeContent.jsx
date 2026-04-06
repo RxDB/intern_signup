@@ -1,12 +1,14 @@
 import styles from "./HomeContent.module.css";
 import ProfileCard from "../ProfileCard/ProfileCard";
 import GroupCard from "../GroupCard/GroupCard";
+import FollowedCard from "../FollowedCard/FollowedCard";
 const HomeContent = () => {
   return (
     <main className={styles.grid}>
       <aside className={styles.leftSidebar} aria-label="Profile sidebar">
       <ProfileCard/>
       <GroupCard/>
+      <FollowedCard/>
       </aside>
 
       <section className={styles.feed} aria-label="Main feed">

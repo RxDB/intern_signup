@@ -6,6 +6,7 @@ import SuggestionCard from "../SuggestionCard/SuggestionCard";
 import CoursesCard from "../CoursesCard/CoursesCard";
 import FooterCard from "../FooterCard/FooterCard";
 import CreatePost from "../CreatePost/CreatePost";
+import SortBar from "../SortBar/SortBar";
 const HomeContent = () => {
   return (
     <main className={styles.grid}>
@@ -17,6 +18,7 @@ const HomeContent = () => {
 
       <section className={styles.feed} aria-label="Main feed">
        <CreatePost/>
+       <SortBar/>
       </section>
 
       <aside className={styles.rightSidebar} aria-label="Suggestions sidebar">

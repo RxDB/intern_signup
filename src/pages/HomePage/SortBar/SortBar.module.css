@@ -1,0 +1,32 @@
+.bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+}
+
+.line{
+    border: none;
+    border-top:1px solid var(--content-black) ;
+    flex:1;
+
+}
+
+.sortWrapper{
+    /* padding: 1rem; */
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    
+}
+
+.select {
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--content-blue);
+  cursor: pointer;
+}

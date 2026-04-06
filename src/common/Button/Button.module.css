@@ -2,10 +2,10 @@
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   border: 0;
-  /* 
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-family: inherit; */
+  
+  /* font-size: 1.5rem;
+  font-weight: 600; */
+  font-family: inherit; 
   /* color: var(--content-white); */
   cursor: pointer;
   box-shadow: var(--box-shadow);

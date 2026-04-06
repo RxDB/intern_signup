@@ -1,0 +1,39 @@
+.card {
+  background-color: var(--content-white);
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+}
+.searchInput input{
+  background: transparent;
+  box-shadow: none;
+  border-radius: 2rem;
+  border: none;
+
+}
+.searchInput input:focus{
+  border: none;
+  outline: none;
+}
+.searchInput{
+  flex:1;
+}
+
+.inputRow{
+  display: flex;
+  align-items: center;
+  background-color: var(--content-grey-bg);
+  padding: 0rem 1rem;
+  border-radius: 2rem;
+}
+
+.actions{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+.actionBtn button{
+  background: transparent;
+  box-shadow: none;
+}

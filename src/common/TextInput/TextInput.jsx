@@ -1,6 +1,6 @@
 import styles from "./TextInput.module.css";
 
-const TextInput = ({ name, value, label, type, onChange, className,error }) => {
+const TextInput = ({ name, value, label, type, onChange, className,error ,placeholder}) => {
   return (
     <div className={`${styles.inputField} ${className}`}>
       <label htmlFor={name}>{label}</label>
@@ -12,6 +12,7 @@ const TextInput = ({ name, value, label, type, onChange, className,error }) => {
         type={type}
         onChange={onChange}
         aria-invalid={Boolean(error)}
+        placeholder={placeholder}
       >
       </input>
        {error && <div className={styles.error}>{error || "\u00A0"}</div>}

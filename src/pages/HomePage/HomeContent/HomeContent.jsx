@@ -1,11 +1,12 @@
 import styles from "./HomeContent.module.css";
-
+import ProfileCard from "../ProfileCard/ProfileCard";
+import GroupCard from "../GroupCard/GroupCard";
 const HomeContent = () => {
   return (
     <main className={styles.grid}>
       <aside className={styles.leftSidebar} aria-label="Profile sidebar">
-        {/* Phase 2-3: ProfileCard, StatsCard, GroupCard, HashtagsCard */}
-        <div className={styles.placeholder}>Left Sidebar</div>
+      <ProfileCard/>
+      <GroupCard/>
       </aside>
 
       <section className={styles.feed} aria-label="Main feed">
@@ -15,7 +16,10 @@ const HomeContent = () => {
 
       <aside className={styles.rightSidebar} aria-label="Suggestions sidebar">
         {/* Phase 6: SuggestionCard, CoursesCard, FooterLinks */}
-        <div className={styles.placeholder}>Right Sidebar</div>
+        {/* <div className={styles.placeholder}>Right Sidebar</div> */}
+        <div className={styles.suggestionCard}>s</div>
+        <div className={styles.coursesCard}>s</div>
+        <div className={styles.footerLinks}>s</div>
       </aside>
     </main>
   );

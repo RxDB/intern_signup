@@ -1,0 +1,58 @@
+.card {
+  background-color: var(--content-white);
+  border-radius: 2rem;
+  /* padding: 1rem; */
+  box-shadow: var(--box-shadow);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  padding: 1rem 1rem 0.5rem 1rem;
+  border-bottom: 1px solid var(--content-grey-transparent);
+}
+
+.count {
+  color: var(--content-blue);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.groupList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  padding: 1rem;
+}
+
+.groupRow {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.5rem;
+  color: var(--content-grey);
+
+  font-size: 0.8rem;
+}
+.groupRow:hover {
+  color: var(--content-blue);
+}
+.badge {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+.all {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+.showAll {
+  color: var(--content-blue);
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 0.8rem;
+}

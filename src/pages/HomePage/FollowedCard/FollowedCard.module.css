@@ -1,0 +1,42 @@
+.card {
+  background-color: var(--content-white);
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  padding: 1rem 1rem 0.5rem 1rem;
+  border-bottom: 1px solid var(--content-grey-transparent);
+}
+
+.arrow {
+  color: var(--content-blue);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.hashTagList {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.5rem;
+
+  padding: 1rem;
+  align-items: flex-start;
+}
+
+.hashBubble {
+  background-color: var(--content-grey-bg);
+  display: flex;
+  padding: 0.5rem;
+  min-height: 0;
+  border-radius: 1rem;
+}
+.hashName {
+  color: var(--content-blue);
+  font-size: 0.7rem;
+  overflow-wrap:anywhere ;
+  font-weight: 700;
+}

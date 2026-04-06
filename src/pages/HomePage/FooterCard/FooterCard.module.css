@@ -1,0 +1,44 @@
+.card {
+  background-color: var(--content-white);
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem 1.25rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem 1.1rem;
+}
+
+.link {
+  color: var(--content-grey);
+  font-size: 0.75rem;
+  line-height: 1.35;
+  text-align: center;
+  cursor: pointer;
+}
+.link:hover{
+    text-decoration: underline;
+}
+
+.brandRow {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  width: 1rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.copyright {
+  color: var(--content-black);
+  font-size: 0.78rem;
+  line-height: 1.3;
+}

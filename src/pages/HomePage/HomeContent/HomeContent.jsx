@@ -2,6 +2,9 @@ import styles from "./HomeContent.module.css";
 import ProfileCard from "../ProfileCard/ProfileCard";
 import GroupCard from "../GroupCard/GroupCard";
 import FollowedCard from "../FollowedCard/FollowedCard";
+import SuggestionCard from "../SuggestionCard/SuggestionCard";
+import CoursesCard from "../CoursesCard/CoursesCard";
+import FooterCard from "../FooterCard/FooterCard";
 const HomeContent = () => {
   return (
     <main className={styles.grid}>
@@ -19,9 +22,9 @@ const HomeContent = () => {
       <aside className={styles.rightSidebar} aria-label="Suggestions sidebar">
         {/* Phase 6: SuggestionCard, CoursesCard, FooterLinks */}
         {/* <div className={styles.placeholder}>Right Sidebar</div> */}
-        <div className={styles.suggestionCard}>s</div>
-        <div className={styles.coursesCard}>s</div>
-        <div className={styles.footerLinks}>s</div>
+        <SuggestionCard/>
+        <CoursesCard/>
+        <FooterCard/>
       </aside>
     </main>
   );

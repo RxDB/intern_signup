@@ -1,0 +1,54 @@
+.card {
+  background-color: var(--content-white);
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  padding: 1rem 1rem 0.5rem 1rem;
+  border-bottom: 1px solid var(--content-grey-transparent);
+}
+
+.arrow {
+  color: var(--content-blue);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.courseList{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.courseRow{
+    display: grid;
+    grid-template-columns: 1.5rem 1fr;
+    gap: 0.75rem;
+    align-items: start;
+    font-weight: 600;
+}
+
+.number{
+    font-size: 0.9rem;
+    color: var(--content-black);
+}
+
+.names{
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.courseTitle{
+    color: var(--content-black);
+}
+
+.author{
+    font-size: 0.7rem;
+    color:var(--content-grey)
+}

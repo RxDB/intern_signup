@@ -14,7 +14,7 @@ const TextInput = ({ name, value, label, type, onChange, className,error }) => {
         aria-invalid={Boolean(error)}
       >
       </input>
-       <div className={styles.error}>{error || "\u00A0"}</div>
+       {error && <div className={styles.error}>{error || "\u00A0"}</div>}
     </div>
   );
 };

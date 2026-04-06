@@ -15,13 +15,11 @@ const HomeContent = () => {
       </aside>
 
       <section className={styles.feed} aria-label="Main feed">
-        {/* Phase 4-5: CreatePost, SortBar, PostCard */}
-        <div className={styles.placeholder}>Center Feed</div>
+       
       </section>
 
       <aside className={styles.rightSidebar} aria-label="Suggestions sidebar">
-        {/* Phase 6: SuggestionCard, CoursesCard, FooterLinks */}
-        {/* <div className={styles.placeholder}>Right Sidebar</div> */}
+    
         <SuggestionCard/>
         <CoursesCard/>
         <FooterCard/>

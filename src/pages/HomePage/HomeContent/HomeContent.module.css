@@ -42,18 +42,3 @@
     color: var(--content-grey);
     padding: 2rem;
 }
-
-/* Temporary placeholder styles — will be removed */
-/* .placeholder {
-  background-color: var(--content-white);
-  border-radius: 12px;
-  padding: 2rem;
-  text-align: center;
-  color: var(--content-grey);
-  font-size: 0.875rem;
-  box-shadow: var(--box-shadow);
-  min-height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */

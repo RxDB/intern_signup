@@ -1,0 +1,111 @@
+.card {
+  background-color: var(--content-white);
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  min-height: 400px;
+  padding: 1rem;
+}
+
+.liked {
+  border-bottom: 2px solid var(--content-grey-transparent);
+  padding: 0.5rem;
+}
+
+.profileRow {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+.profileRow img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+.textTime {
+  display: flex;
+  gap: 1rem;
+  color: var(--content-grey);
+  font-size: 0.8rem;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 1rem;
+  gap: 0.5rem;
+}
+.bodyText {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  margin: 0;
+}
+
+.postImage{
+    border-radius: 1rem;
+}
+
+.readMore {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--content-blue);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.actionBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem 0;
+  border-top: 1px solid var(--content-grey-transparent);
+  gap: 1rem;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.reactions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.reactionIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.reactionIcon + .reactionIcon {
+  margin-left: -0.2rem;
+}
+
+.commentsCount {
+  color: var(--content-grey);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.actionButtons {
+  display: flex;
+  align-items: center;
+}
+
+.actionBtn button {
+  padding: 0.35rem;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}

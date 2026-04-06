@@ -1,7 +1,6 @@
 .card {
   background-color: var(--content-white);
   border-radius: 2rem;
-  /* padding: 1rem; */
   box-shadow: var(--box-shadow);
 }
 .header {

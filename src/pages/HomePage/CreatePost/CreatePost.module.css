@@ -34,6 +34,24 @@
   flex-wrap: wrap;
 }
 
+.hiddenInput {
+  display: none;
+}
+
+.attachmentSummary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem 0;
+}
+
+.attachmentTag {
+  background-color: var(--content-grey-bg);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  padding: 0.35rem 0.75rem;
+}
+
 .divider {
   border: none;
   border-top: 3px solid var(--content-grey-bg);

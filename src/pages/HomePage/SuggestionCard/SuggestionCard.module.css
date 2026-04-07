@@ -77,3 +77,8 @@
     justify-content: center;
     cursor: pointer;
 }
+
+.addButton:hover{
+    background-color: var(--content-blue);
+    color: var(--content-white);
+}

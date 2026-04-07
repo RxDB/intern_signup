@@ -23,10 +23,10 @@
   flex-direction: column;
   gap: 0.5rem;
 
-  padding: 1rem;
 }
 
 .groupRow {
+  padding: 0rem 1rem;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -37,6 +37,7 @@
 }
 .groupRow:hover {
   color: var(--content-blue);
+  background-color: var(--content-grey-bg);
 }
 .badge {
   height: 30px;
@@ -54,4 +55,9 @@
   background: none;
   font-family: inherit;
   font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.showAll:hover{
+  font-weight: 800;
 }

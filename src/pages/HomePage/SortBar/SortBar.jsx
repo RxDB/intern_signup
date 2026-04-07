@@ -1,11 +1,17 @@
 import styles from "./SortBar.module.css";
-const SortBar = () => {
+
+const SortBar = ({ value, onChange }) => {
   return (
     <div className={styles.bar}>
       <hr className={styles.line} />
       <div className={styles.sortWrapper}>
         <span className={styles.label}>Sort by:</span>
-        <select className={styles.select} aria-label="Sort feed">
+        <select
+          className={styles.select}
+          aria-label="Sort feed"
+          value={value}
+          onChange={(event) => onChange(event.target.value)}
+        >
           <option value="top">Top</option>
           <option value="recent">Recent</option>
         </select>

@@ -21,11 +21,15 @@
   display: flex;
   gap: 1rem;
   padding: 1rem;
+  cursor: pointer;
 }
 .profileRow img {
   height: 50px;
   width: 50px;
   border-radius: 50%;
+}
+.profileName:hover{
+  text-decoration: underline;
 }
 
 .text {

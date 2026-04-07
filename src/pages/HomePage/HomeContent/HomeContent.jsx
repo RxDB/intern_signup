@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./HomeContent.module.css";
 import ProfileCard from "../ProfileCard/ProfileCard";
 import GroupCard from "../GroupCard/GroupCard";
@@ -104,36 +104,7 @@ const initialPosts = [
 const HomeContent = () => {
   const [posts, setPosts] = useState(initialPosts);
   const [postText, setPostText] = useState("");
-
   const [sortBy, setSortBy] = useState("top");
-  const leftRef = useRef(null);
-  const rightRef = useRef(null);
-  const [leftTop, setLeftTop] = useState("1rem");
-  const [rightTop, setRightTop] = useState("1rem");
-
-  useEffect(() => {
-    const calculate = () => {
-      const viewportH = window.innerHeight;
-      const margin = 16;
-
-      [
-        { el: leftRef.current, set: setLeftTop },
-        { el: rightRef.current, set: setRightTop },
-      ].forEach(({ el, set }) => {
-        if (!el) return;
-        const h = el.offsetHeight;
-        if (h > viewportH - margin * 2) {
-          set(`${viewportH - h - margin}px`);
-        } else {
-          set("1rem");
-        }
-      });
-    };
-
-    calculate();
-    window.addEventListener("resize", calculate);
-    return () => window.removeEventListener("resize", calculate);
-  }, []);
 
   const sortedPosts = [...posts].sort((firstPost, secondPost) => {
     if (sortBy === "recent") {
@@ -169,12 +140,7 @@ const HomeContent = () => {
 
   return (
     <main className={styles.grid}>
-      <aside
-        ref={leftRef}
-        className={styles.leftSidebar}
-        style={{ top: leftTop }}
-        aria-label="Profile sidebar"
-      >
+      <aside className={styles.leftSidebar} aria-label="Profile sidebar">
         <ProfileCard />
         <GroupCard />
         <FollowedCard />
@@ -192,12 +158,7 @@ const HomeContent = () => {
         ))}
       </section>
 
-      <aside
-        ref={rightRef}
-        className={styles.rightSidebar}
-        style={{ top: rightTop }}
-        aria-label="Suggestions sidebar"
-      >
+      <aside className={styles.rightSidebar} aria-label="Suggestions sidebar">
         <SuggestionCard />
         <CoursesCard />
         <FooterCard />

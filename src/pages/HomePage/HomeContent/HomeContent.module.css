@@ -12,7 +12,7 @@
     flex-direction: column;
     gap: 0.75rem;
     position: sticky;
-
+    top: -8rem;
     align-self: start;
 }
 
@@ -28,7 +28,7 @@
     flex-direction: column;
     gap: 0.75rem;
     position: sticky;
-   
+    top: -20rem;
     align-self: start;
 }
 

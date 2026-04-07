@@ -1,4 +1,4 @@
-import { useRef } from "react";
+
 import styles from "./CreatePost.module.css";
 import TextInput from "../../../common/TextInput/TextInput";
 import Button from "../../../common/Button/Button";
@@ -12,22 +12,16 @@ const CreatePost = ({
   value,
   onChange,
   onSubmit,
-  selectedFiles,
-  onFileSelect,
+
 }) => {
-  const photoInputRef = useRef(null);
-  const videoInputRef = useRef(null);
-  const eventInputRef = useRef(null);
-  const articleInputRef = useRef(null);
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
     onSubmit();
   };
 
-  const selectedFileNames = Object.values(selectedFiles)
-    .filter(Boolean)
-    .map((file) => file.name);
+
 
   return (
     <form className={styles.card} onSubmit={handleSubmit}>
@@ -43,47 +37,9 @@ const CreatePost = ({
         />
       </div>
 
-      {selectedFileNames.length > 0 && (
-        <div className={styles.attachmentSummary}>
-          {selectedFileNames.map((fileName) => (
-            <span key={fileName} className={styles.attachmentTag}>
-              {fileName}
-            </span>
-          ))}
-        </div>
-      )}
-
-      <input
-        ref={photoInputRef}
-        type="file"
-        accept="image/*"
-        className={styles.hiddenInput}
-        onChange={(event) => onFileSelect("photo", event.target.files?.[0] ?? null)}
-      />
-      <input
-        ref={videoInputRef}
-        type="file"
-        accept="video/*"
-        className={styles.hiddenInput}
-        onChange={(event) => onFileSelect("video", event.target.files?.[0] ?? null)}
-      />
-      <input
-        ref={eventInputRef}
-        type="file"
-        accept="image/*"
-        className={styles.hiddenInput}
-        onChange={(event) => onFileSelect("event", event.target.files?.[0] ?? null)}
-      />
-      <input
-        ref={articleInputRef}
-        type="file"
-        accept="image/*"
-        className={styles.hiddenInput}
-        onChange={(event) =>
-          onFileSelect("article", event.target.files?.[0] ?? null)
-        }
-      />
-
+   
+    
+      
       <hr className={styles.divider} />
       <div className={styles.actions}>
         <Button
@@ -91,28 +47,27 @@ const CreatePost = ({
           name="Photo"
           className={styles.actionBtn}
           icon={photoIcon}
-          onClick={() => photoInputRef.current?.click()}
+    
         />
         <Button
           type="button"
           name="Video"
           className={styles.actionBtn}
           icon={videoIcon}
-          onClick={() => videoInputRef.current?.click()}
+  
         />
         <Button
           type="button"
           name="Event"
           className={styles.actionBtn}
           icon={eventIcon}
-          onClick={() => eventInputRef.current?.click()}
         />
         <Button
           type="button"
           name="Article"
           className={styles.actionBtn}
           icon={articleIcon}
-          onClick={() => articleInputRef.current?.click()}
+
         />
       </div>
     </form>

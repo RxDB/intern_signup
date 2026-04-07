@@ -9,7 +9,7 @@ import FooterCard from "../FooterCard/FooterCard";
 import CreatePost from "../CreatePost/CreatePost";
 import SortBar from "../SortBar/SortBar";
 import PostCard from "../PostCard/PostCard";
-import avatar from "../../../assets/avatar.jpeg"
+import avatar from "../../../assets/avatar.jpeg";
 import suggestion1 from "../../../assets/suggestions/1691240541842.jpeg";
 import suggestion2 from "../../../assets/suggestions/1705255323848.jpeg";
 import suggestion3 from "../../../assets/suggestions/1713795109052.jpeg";
@@ -101,18 +101,10 @@ const initialPosts = [
   },
 ];
 
-
-const contentImages = [content1, content2, content3, content4];
-
 const HomeContent = () => {
   const [posts, setPosts] = useState(initialPosts);
   const [postText, setPostText] = useState("");
-  const [selectedFiles, setSelectedFiles] = useState({
-    photo: "",
-    video: "",
-    event: "",
-    article: "",
-  });
+
   const [sortBy, setSortBy] = useState("top");
   const leftRef = useRef(null);
   const rightRef = useRef(null);
@@ -153,16 +145,10 @@ const HomeContent = () => {
 
   const handleCreatePost = () => {
     const trimmedPost = postText.trim();
-    const hasAttachment = Object.values(selectedFiles).some(Boolean);
 
-    if (!trimmedPost && !hasAttachment) {
+    if (!trimmedPost) {
       return;
     }
-
-    const photoFile = selectedFiles.photo;
-    const nextImage = photoFile
-      ? URL.createObjectURL(photoFile)
-      : contentImages[posts.length % contentImages.length];
 
     const newPost = {
       id: Date.now(),
@@ -172,19 +158,13 @@ const HomeContent = () => {
       timeAgo: "Just now",
       content: trimmedPost || "Shared new attachments.",
       profileImage: avatar,
-      image: nextImage,
+
       time: 0,
       comments: 0,
     };
 
     setPosts((currentPosts) => [newPost, ...currentPosts]);
     setPostText("");
-    setSelectedFiles({
-      photo: "",
-      video: "",
-      event: "",
-      article: "",
-    });
   };
 
   return (
@@ -205,13 +185,6 @@ const HomeContent = () => {
           value={postText}
           onChange={(event) => setPostText(event.target.value)}
           onSubmit={handleCreatePost}
-          selectedFiles={selectedFiles}
-          onFileSelect={(type, file) =>
-            setSelectedFiles((currentFiles) => ({
-              ...currentFiles,
-              [type]: file,
-            }))
-          }
         />
         <SortBar value={sortBy} onChange={setSortBy} />
         {sortedPosts.map((post) => (

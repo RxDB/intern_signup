@@ -9,13 +9,20 @@
   align-items: center;
   font-size: 1rem;
   padding: 1rem 1rem 0.5rem 1rem;
-  border-bottom: 1px solid var(--content-grey-transparent);
+  border-bottom: 3px solid var(--content-grey-bg);
+}
+
+.title{
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--content-black);
 }
 
 .arrow {
   color: var(--content-blue);
   font-size: 0.75rem;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .hashTagList {

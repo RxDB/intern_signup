@@ -10,7 +10,9 @@
 
 .cover {
   height: 100px;
-  background: linear-gradient(135deg, #70b5f9, #0a66c2);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .avatarWrapper {
@@ -63,7 +65,7 @@
   padding: 1rem;
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid var(--content-grey-transparent);
+  border-top: 3px solid var(--content-grey-bg);
   cursor: pointer;
 
   transition: background-color 0.5s ease;

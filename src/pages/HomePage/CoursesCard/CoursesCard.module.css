@@ -9,20 +9,20 @@
   align-items: center;
   font-size: 1rem;
   padding: 1rem 1rem 0.5rem 1rem;
-  border-bottom: 1px solid var(--content-grey-transparent);
+  border-bottom: 3px solid var(--content-grey-bg);
 }
 
 .arrow {
   color: var(--content-blue);
   font-size: 0.75rem;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .courseList{
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
+    padding: 1rem 0;
 }
 
 .courseRow{
@@ -31,6 +31,13 @@
     gap: 0.75rem;
     align-items: start;
     font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 0.75rem 1rem;
+}
+
+.courseRow:hover{
+    background-color: var(--content-grey-bg);
 }
 
 .number{

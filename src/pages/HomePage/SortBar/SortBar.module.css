@@ -8,7 +8,7 @@
 
 .line{
     border: none;
-    border-top:1px solid var(--content-black) ;
+    border-top:2px solid var(--content-grey-transparent) ;
     flex:1;
 
 }

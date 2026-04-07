@@ -4,6 +4,7 @@ import suggestion2 from "../../../assets/suggestions/1705255323848.jpeg";
 import suggestion3 from "../../../assets/suggestions/1713795109052.jpeg";
 import suggestion4 from "../../../assets/suggestions/1732875366373.jpeg";
 import suggestion5 from "../../../assets/suggestions/1740908165366.jpeg";
+import arrow from "../../../assets/arrow.svg"
 
 const suggestions = [
   {
@@ -37,8 +38,10 @@ const SuggestionCard = ()=>{
     return(
           <div className={styles.card}>
               <div className={styles.header}>
-                <div className={styles.title}>Group</div>
-                <div className={styles.arrow}>12</div>
+                <div className={styles.title}>Add to your feed</div>
+                <div className={styles.arrow}>
+                  <img src={arrow}/>
+                </div>
               </div>
         
               <div className={styles.suggestionList}>

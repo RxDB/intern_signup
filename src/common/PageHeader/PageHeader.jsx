@@ -5,6 +5,7 @@ import suitcaseIcon from "../../assets/suitcase.svg";
 import chatIcon from "../../assets/chat.svg";
 import bellIcon from "../../assets/bell.svg";
 import fourIcon from "../../assets/four.svg";
+import searchIcon from "../../assets/search.svg";
 import linked from "../../assets/linkedin.png";
 import dark from "../../assets/dark.svg";
 import Button from "../../common/Button/Button.jsx";
@@ -23,6 +24,7 @@ const PageHeader = () => {
       <div className={styles.centerSection}>
         <label className={styles.searchWrapper}>
           <span className={styles.srOnly}>Search</span>
+          <img src={searchIcon} alt="" className={styles.searchIcon} />
           <input
             placeholder="Search"
             className={styles.search}
@@ -31,7 +33,7 @@ const PageHeader = () => {
           />
         </label>
         <nav className={styles.centerIcons} aria-label="Primary">
-          <Button name="Work" type="button" icon={homeIcon} className={styles.navI} />
+          <Button name="Home" type="button" icon={homeIcon} className={`${styles.navI} ${styles.homeIcon}`} />
           <Button
             name="My network"
             type="button"

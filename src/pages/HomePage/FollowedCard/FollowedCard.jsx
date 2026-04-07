@@ -1,4 +1,5 @@
 import styles from "./FollowedCard.module.css";
+import arrow from "../../../assets/arrow.svg"
 
 const hashtags = ["#uidesign", "#uxdesign", "#mobileappdesign", "#uianimation"];
 
@@ -6,8 +7,10 @@ const FollowedCard = () => {
   return (
     <div className={styles.card}>
       <div className={styles.header}>
-        <div className={styles.title}>Group</div>
-        <div className={styles.arrow}>12</div>
+        <div className={styles.title}>Followed Hashtags</div>
+        <div className={styles.arrow}>
+          <img src={arrow}/>
+        </div>
       </div>
 
       <div className={styles.hashTagList}>

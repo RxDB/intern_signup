@@ -20,7 +20,7 @@ const posts = [
     content:
       "I'm back with a design exploration of the weather mobile app concept. This design concept allows you to know the weather for today and the following days. You can also search for weather information in other locations around the world. Besides weather info, you can also find out how good the air quality around .....",
     image: "",
-
+    time:2,
     comments: 96,
   },
   {
@@ -32,7 +32,7 @@ const posts = [
     content:
       "I'm back with a design exploration of the weather mobile app concept. This design concept allows you to know the weather for today and the following days. You can also search for weather information in other locations around the world. Besides weather info, you can also find out how good the air quality around .....",
     image: "",
-
+    time:1,
     comments: 96,
   },
 ];

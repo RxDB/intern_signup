@@ -1,10 +1,14 @@
 import styles from "./ProfileCard.module.css";
-import avatar from "../../../assets/avatar.jpeg"
+import avatar from "../../../assets/avatar.jpeg";
+import silver from "../../../assets/silver.jpg";
 
 const ProfileCard = () => {
   return (
     <div className={styles.card}>
-      <div className={styles.cover}></div>
+      <div
+        className={styles.cover}
+        style={{ backgroundImage: `url(${silver})` }}
+      ></div>
       <div className={styles.body}>
         <div className={styles.avatarWrapper}>
           <img src={avatar} alt="Profile" className={styles.avatar} />

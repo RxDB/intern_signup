@@ -15,7 +15,12 @@ import suggestion2 from "../../../assets/suggestions/1705255323848.jpeg";
 const PostCard = ({ post }) => {
   return (
     <div className={styles.card}>
-      {post.likedby && <div className={styles.liked}>{post.likedby} liked</div>}
+      {post.likedBy && (
+        <div className={styles.liked}>
+          <span>{post.likedBy}</span>
+          <span className={styles.likedLabel}> liked</span>
+        </div>
+      )}
 
       <div className={styles.profileRow}>
         <img src={suggestion1} alt="profile" />

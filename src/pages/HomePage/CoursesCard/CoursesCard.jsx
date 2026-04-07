@@ -1,4 +1,5 @@
 import styles from "./CoursesCard.module.css";
+import arrow from "../../../assets/arrow.svg"
 
 const courses = [
   {
@@ -27,8 +28,10 @@ const CoursesCard = () => {
   return (
     <div className={styles.card}>
       <div className={styles.header}>
-        <div className={styles.title}>Group</div>
-        <div className={styles.arrow}>12</div>
+        <div className={styles.title}>Today's top courses</div>
+        <div className={styles.arrow}>
+          <img src={arrow}/>
+        </div>
       </div>
 
       <div className={styles.courseList}>

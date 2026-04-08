@@ -9,7 +9,7 @@
   align-items: center;
   font-size: 1rem;
   padding: 1rem 1rem 0.5rem 1rem;
-  border-bottom: 3px solid var(--content-grey-bg);
+  border-bottom: 2px solid var(--content-grey-border);
 }
 
 .arrow {
@@ -17,6 +17,11 @@
   font-size: 0.75rem;
   font-weight: 600;
   cursor: pointer;
+}
+.title{
+    color: var(--content-black);
+    font-weight: 700;
+    font-size: 0.9rem;
 }
 
 .courseList{
@@ -57,5 +62,5 @@
 
 .author{
     font-size: 0.7rem;
-    color:var(--content-grey)
+    color:var(--content-grey-light)
 }

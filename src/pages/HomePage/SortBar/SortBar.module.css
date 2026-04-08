@@ -4,6 +4,8 @@
     justify-content: center;
     gap: 0.5rem;
 
+    padding: 1rem;
+
 }
 
 .line{
@@ -11,6 +13,12 @@
     border-top:2px solid var(--content-grey-transparent) ;
     flex:1;
 
+}
+
+.label{
+    color: var(--content-grey);
+    font-size: 0.8rem;
+    font-weight: 800;
 }
 
 .sortWrapper{
@@ -33,4 +41,3 @@
 .select:focus{
     outline:none
 }
-

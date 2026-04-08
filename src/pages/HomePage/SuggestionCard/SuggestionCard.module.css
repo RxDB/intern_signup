@@ -9,7 +9,7 @@
   align-items: center;
   font-size: 1rem;
   padding: 1rem 1rem 0.5rem 1rem;
-  border-bottom: 3px solid var(--content-grey-bg);
+  border-bottom: 2px solid var(--content-grey-border);
 }
 
 .title{
@@ -57,7 +57,7 @@
 
 }
 .title{
-    color: var(--content-grey);
+    color: var(--content-grey-light);
     font-size:0.8rem;
 }
 

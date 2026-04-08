@@ -19,7 +19,7 @@ const GroupCard = () => {
             <span
               className={styles.badge}
               style={{ backgroundColor: group.color }}
-            ></span>
+            >UI/UX</span>
             <span className={styles.groupName}>{group.name}</span>
           </div>
         ))}

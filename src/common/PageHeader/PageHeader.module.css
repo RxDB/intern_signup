@@ -94,12 +94,18 @@
 }
 
 .navI button {
-  background-color: var(--content-grey-bg);
+  background-color: var(--button-grey);
+  font-weight: 600;
+  color: var(--content-black);
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
+.round button{
+  border-radius: 50%;
+  padding: 0.5rem;
 
+}
 .srOnly {
   position: absolute;
   width: 1px;

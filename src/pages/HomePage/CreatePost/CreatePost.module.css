@@ -56,16 +56,25 @@
 
 .divider {
   border: none;
-  border-top: 3px solid var(--content-grey-bg);
+  border-top: 2px solid var(--content-grey-border);
   margin: 1rem 0;
 }
 
 .actionBtn button {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.5rem;
   background: transparent;
   box-shadow: none;
   transition: background-color 0.3s ease;
+
+  color: var(--content-black);
+  font-weight: 800;
+}
+
+.actionBtn img{
+  height: 30px;
+  width: 30px;
 }
 
 .actionBtn button:hover {

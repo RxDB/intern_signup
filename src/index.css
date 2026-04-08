@@ -8,9 +8,12 @@
   --font-main: "Poppins", "system-ui", serif;
   --content-white: #ffffff;
   --content-grey: #666666;
+  --content-grey-light:#9b9b9b;
   --content-grey-bg:rgb(242, 249, 255);
   --content-grey-transparent: #66666659;
-  --content-black: #333333;
+  --content-black: #565555;
+
+  --button-grey:rgb(239 243 243);
   --content-grey-border:rgb(236, 236, 243);
   --content-blue:rgb(9, 120, 221);
 

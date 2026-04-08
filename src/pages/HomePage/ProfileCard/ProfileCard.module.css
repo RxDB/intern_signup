@@ -37,8 +37,9 @@
 .title {
   display: flex;
   justify-content: center;
+  color: var(--content-black);
 
-  /* font-size: 5rem; */
+  font-size: .8rem;
 }
 .bio {
   display: flex;
@@ -65,7 +66,7 @@
   padding: 1rem;
   display: flex;
   justify-content: space-between;
-  border-top: 3px solid var(--content-grey-bg);
+  border-top: 2px solid var(--content-grey-border);
   cursor: pointer;
 
   transition: background-color 0.5s ease;

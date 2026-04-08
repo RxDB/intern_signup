@@ -40,6 +40,7 @@ const PostCard = ({ post }) => {
 
           <div className={styles.textTime}>
             <span className={styles.profileTitle}>{post.title}</span>
+            <span className={styles.metaSeparator} aria-hidden="true"/>
             <span className={styles.time}>{post.timeAgo}</span>
           </div>
         </div>

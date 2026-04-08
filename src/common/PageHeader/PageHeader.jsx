@@ -63,7 +63,7 @@ const PageHeader = () => {
             name=""
             type="button"
             icon={bellIcon}
-            className={styles.navI}
+            className={`${styles.navI} ${styles.round}`}
             ariaLabel="Notifications"
           />
           <span className={styles.notificationCount}>2</span>
@@ -72,7 +72,7 @@ const PageHeader = () => {
           name=""
           type="button"
           icon={chatIcon}
-          className={styles.navI}
+          className={`${styles.navI} ${styles.round}`}
           ariaLabel="Messages"
         />
         <div className={styles.profileIcon}>

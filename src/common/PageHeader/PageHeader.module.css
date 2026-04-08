@@ -12,7 +12,7 @@
   width: min(1070px, calc(100% - 2rem));
   padding: 1rem 1.5rem;
   border-radius: 99px;
-  margin: 1rem auto;
+  margin: 0rem auto;
 
 
   position: sticky;
@@ -31,7 +31,7 @@
   border-radius: 99px;
   font-family: inherit;
   background-color: var(--content-grey-bg);
-
+  color: var(--content-grey);
   border: 2px solid var(--content-grey-border);
 }
 

@@ -12,9 +12,6 @@
   border-bottom: 2px solid var(--content-grey-border);
 }
 
-.title{
-    font-weight: 800;
-}
 
 .arrow {
   color: var(--content-blue);
@@ -26,7 +23,6 @@
 .suggestionList{
     display: flex;
     flex-direction: column;
-    padding: 1rem 0;
 }
 
 .suggestionRows{
@@ -57,7 +53,8 @@
 
 }
 .title{
-    color: var(--content-grey-light);
+    color: var(--content-black);
+    font-weight: 900;
     font-size:0.8rem;
 }
 

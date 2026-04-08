@@ -11,27 +11,27 @@ import FooterCard from "../FooterCard/FooterCard";
 
 
 const HomeContent = () => {
- 
-
   return (
-    <main className={styles.grid}>
+    <div className={styles.page}>
+      <main className={styles.grid}>
         <PageHeader />
-      <aside className={styles.leftSidebar} aria-label="Profile sidebar">
-        <ProfileCard />
-        <GroupCard />
-        <FollowedCard />
-      </aside>
+        <aside className={styles.leftSidebar} aria-label="Profile sidebar">
+          <ProfileCard />
+          <GroupCard />
+          <FollowedCard />
+        </aside>
 
-      <section className={styles.feed} aria-label="Main feed">
-        <Outlet/>
-      </section>
+        <section className={styles.feed} aria-label="Main feed">
+          <Outlet />
+        </section>
 
-      <aside className={styles.rightSidebar} aria-label="Suggestions sidebar">
-        <SuggestionCard />
-        <CoursesCard />
-        <FooterCard />
-      </aside>
-    </main>
+        <aside className={styles.rightSidebar} aria-label="Suggestions sidebar">
+          <SuggestionCard />
+          <CoursesCard />
+          <FooterCard />
+        </aside>
+      </main>
+    </div>
   );
 };
 

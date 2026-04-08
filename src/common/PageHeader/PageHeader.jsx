@@ -9,7 +9,7 @@ import searchIcon from "../../assets/search.svg";
 import linked from "../../assets/linkedin.png";
 import dark from "../../assets/dark.svg";
 import Button from "../../common/Button/Button.jsx";
-
+import avatar from "../../assets/avatar.jpeg";
 const PageHeader = () => {
   return (
     <header className={styles.header}>
@@ -33,14 +33,24 @@ const PageHeader = () => {
           />
         </label>
         <nav className={styles.centerIcons} aria-label="Primary">
-          <Button name="Home" type="button" icon={homeIcon} className={`${styles.navI} ${styles.homeIcon}`} />
+          <Button
+            name="Home"
+            type="button"
+            icon={homeIcon}
+            className={`${styles.navI} ${styles.homeIcon}`}
+          />
           <Button
             name="My network"
             type="button"
             icon={peopleIcon}
             className={styles.navI}
           />
-          <Button name="Jobs" type="button" icon={suitcaseIcon} className={styles.navI} />
+          <Button
+            name="Jobs"
+            type="button"
+            icon={suitcaseIcon}
+            className={styles.navI}
+          />
         </nav>
       </div>
       <div className={styles.rightIcons}>
@@ -58,8 +68,15 @@ const PageHeader = () => {
           className={styles.navI}
           ariaLabel="Messages"
         />
+        <div className={styles.profileIcon}>
+          <img src={avatar} alt="profile"></img>
+          <span className={styles.meWrapper}>
+            <span>Me</span>
+            <select></select>
+          </span>
+        </div>
         <Button
-          name=""
+          name="Work"
           type="button"
           icon={fourIcon}
           className={styles.navI}

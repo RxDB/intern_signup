@@ -9,10 +9,14 @@
   justify-content: space-between;
   gap: 1rem;
   background-color: var(--content-white);
-  width: min(1120px, calc(100% - 2rem));
+  width: min(1070px, calc(100% - 2rem));
   padding: 1rem 1.5rem;
   border-radius: 99px;
   margin: 1rem auto;
+
+
+  position: sticky;
+  top: 1rem;
 }
 
 .searchWrapper {
@@ -100,44 +104,23 @@
   color: var(--content-white);
 }
 
-/* @media (max-width: 900px) {
-  .header {
-    border-radius: 24px;
-    padding: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .centerSection {
-    order: 3;
-    width: 100%;
-    flex-wrap: wrap;
-  }
-
-  .searchWrapper {
-    flex-basis: 100%;
-  }
-
-  .centerIcons,
-  .rightIcons {
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
+.profileIcon{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.profileIcon img{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.profileIcon select{
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
-@media (max-width: 560px) {
-  .header {
-    width: calc(100% - 1rem);
-    padding: 0.75rem;
-  }
-
-  .centerIcons,
-  .rightIcons,
-  .leftIcons,
-  .centerSection {
-    gap: 0.5rem;
-  }
-
-  .navI button {
-    padding: 0.5rem 0.75rem;
-  }
-} */
+.profileIcon select:focus{
+  outline: none;
+}

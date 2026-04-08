@@ -20,8 +20,16 @@ const PostCard = ({ post }) => {
     <div className={styles.card}>
       {post.likedBy && (
         <div className={styles.liked}>
-          <span>{post.likedBy}</span>
-          <span className={styles.likedLabel}> liked</span>
+          <div className={styles.likedLeft}>
+            <span>{post.likedBy}</span>
+            <span className={styles.likedLabel}> liked</span>
+          </div>
+
+          <div className={styles.likedRight}>
+            <span className={styles.metaSeparator} aria-hidden="true" />
+            <span className={styles.metaSeparator} aria-hidden="true" />
+            <span className={styles.metaSeparator} aria-hidden="true" />
+          </div>
         </div>
       )}
 
@@ -79,12 +87,12 @@ const PostCard = ({ post }) => {
         </div>
         <div className={styles.meta}>
           <div className={styles.reactions}>
-            <img src={postLikeIcon} alt="" className={styles.reactionIcon} />
             <img src={postHeartIcon} alt="" className={styles.reactionIcon} />
+            <img src={postLikeIcon} alt="" className={styles.reactionIcon} />
           </div>
-          <span className={styles.commentsCount}>
-            {post.comments} comments
-          </span>
+          <span className={styles.Count}>{post.likes} </span>
+          <span className={styles.metaSeparator} aria-hidden="true" />
+          <span className={styles.Count}>{post.comments} comments</span>
         </div>
       </div>
     </div>

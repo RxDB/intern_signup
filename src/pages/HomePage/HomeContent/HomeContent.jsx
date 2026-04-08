@@ -8,8 +8,6 @@ import SuggestionCard from "../SuggestionCard/SuggestionCard";
 import CoursesCard from "../CoursesCard/CoursesCard";
 import FooterCard from "../FooterCard/FooterCard";
 
-
-
 const HomeContent = () => {
   return (
     <div className={styles.page}>

@@ -18,6 +18,10 @@
   position: sticky;
   top: 0rem;
 }
+.header button:hover{
+  transform: translateY(-2px);
+
+}
 
 .searchWrapper {
   flex: 1 1 220px;
@@ -61,6 +65,7 @@
 .darkMode img{
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
 .centerSection {

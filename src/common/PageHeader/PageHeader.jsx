@@ -32,6 +32,7 @@ const PageHeader = () => {
             aria-label="Search"
           />
         </label>
+
         <nav className={styles.centerIcons} aria-label="Primary">
           <Button
             name="Home"
@@ -53,16 +54,19 @@ const PageHeader = () => {
           />
         </nav>
       </div>
+
+      <div className={styles.centerSeparator} />
+
       <div className={styles.rightIcons}>
         <div className={styles.notificationButton}>
-        <Button
-          name=""
-          type="button"
-          icon={bellIcon}
-          className={styles.navI}
-          ariaLabel="Notifications"
-        />
-        <span className={styles.notificationCount}>2</span>
+          <Button
+            name=""
+            type="button"
+            icon={bellIcon}
+            className={styles.navI}
+            ariaLabel="Notifications"
+          />
+          <span className={styles.notificationCount}>2</span>
         </div>
         <Button
           name=""

@@ -31,6 +31,8 @@
   border-radius: 99px;
   font-family: inherit;
   background-color: var(--content-grey-bg);
+
+  border: 2px solid var(--content-grey-border);
 }
 
 .searchIcon {
@@ -52,9 +54,13 @@
   flex-shrink: 0;
 }
 
-.leftIcons img {
+.linked img {
   height: 30px;
   width: 30px;
+}
+.darkMode img{
+  width: 20px;
+  height: 20px;
 }
 
 .centerSection {
@@ -72,10 +78,17 @@
   gap: 1rem;
 }
 
-.centerIcons {
-  flex-wrap: wrap;
-}
+/* .centerIcons {
+  flex-wrap: wrap; 
+  border-right: 2px solid var(--content-grey);
+} */
 
+.centerSeparator{
+  width: 2px;
+  height: 2.25rem;
+  flex-shrink: 0;
+  background-color: var(--content-grey-border);
+}
 .rightIcons {
   flex-shrink: 0;
 }

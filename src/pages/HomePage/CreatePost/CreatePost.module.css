@@ -25,6 +25,8 @@
   padding: 0rem 1rem;
   border-radius: 2rem;
   gap: 1rem;
+
+  border: 2px solid var(--content-grey-border);
 }
 
 .actions {

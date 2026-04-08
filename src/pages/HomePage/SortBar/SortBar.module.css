@@ -36,6 +36,8 @@
   font-weight: 600;
   color: var(--content-blue);
   cursor: pointer;
+
+
 }
 
 .select:focus{

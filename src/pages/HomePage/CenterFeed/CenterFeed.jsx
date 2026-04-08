@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./CenterFeed.module.css"
+import styles from "./CenterFeed.module.css";
 import CreatePost from "../CreatePost/CreatePost";
 import SortBar from "../SortBar/SortBar";
 import PostCard from "../PostCard/PostCard";
@@ -27,7 +27,7 @@ const initialPosts = [
     image: content1,
     time: 2,
     comments: 96,
-    likes:142,
+    likes: 142,
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ const initialPosts = [
     image: content2,
     time: 1,
     comments: 84,
-     likes:142,
+    likes: 142,
   },
   {
     id: 3,
@@ -55,7 +55,7 @@ const initialPosts = [
     image: content3,
     time: 3,
     comments: 61,
-     likes:121,
+    likes: 121,
   },
   {
     id: 4,
@@ -69,7 +69,7 @@ const initialPosts = [
     image: content4,
     time: 5,
     comments: 44,
-     likes:89,
+    likes: 89,
   },
   {
     id: 5,
@@ -83,7 +83,7 @@ const initialPosts = [
     image: content1,
     time: 6,
     comments: 72,
-     likes:191,
+    likes: 191,
   },
   {
     id: 6,
@@ -97,13 +97,13 @@ const initialPosts = [
     image: content2,
     time: 8,
     comments: 53,
-     likes:90,
+    likes: 90,
   },
 ];
 const CenterFeed = () => {
   const [posts, setPosts] = useState(initialPosts);
   const [postText, setPostText] = useState("");
-  const [sortBy, setSortBy] = useState("top");
+  const [sortBy, setSortBy] = useState("recent");
 
   const sortedPosts = [...posts].sort((firstPost, secondPost) => {
     if (sortBy === "recent") {
@@ -146,9 +146,9 @@ const CenterFeed = () => {
       <SortBar value={sortBy} onChange={setSortBy} />
 
       <div className={styles.postCards}>
-      {sortedPosts.map((post) => (
-        <PostCard key={post.id} post={post} />
-      ))}
+        {sortedPosts.map((post) => (
+          <PostCard key={post.id} post={post} />
+        ))}
       </div>
     </div>
   );

@@ -54,6 +54,7 @@ const PageHeader = () => {
         </nav>
       </div>
       <div className={styles.rightIcons}>
+        <div className={styles.notificationButton}>
         <Button
           name=""
           type="button"
@@ -61,6 +62,8 @@ const PageHeader = () => {
           className={styles.navI}
           ariaLabel="Notifications"
         />
+        <span className={styles.notificationCount}>2</span>
+        </div>
         <Button
           name=""
           type="button"

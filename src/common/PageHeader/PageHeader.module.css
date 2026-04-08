@@ -124,3 +124,28 @@
 .profileIcon select:focus{
   outline: none;
 }
+
+.notificationButton{
+position: relative;
+}
+
+.notificationCount{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+
+  background-color: rgb(227, 38, 38);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+
+  color:var(--content-white);
+
+  top:1px;
+  right: -2px;
+  transform: translateY(-50%);
+
+  font-size: 0.7rem;
+}

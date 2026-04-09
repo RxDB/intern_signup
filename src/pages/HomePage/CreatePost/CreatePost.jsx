@@ -1,4 +1,4 @@
-
+import { useId } from "react";
 import styles from "./CreatePost.module.css";
 import TextInput from "../../../common/TextInput/TextInput";
 import Button from "../../../common/Button/Button";
@@ -12,16 +12,16 @@ const CreatePost = ({
   value,
   onChange,
   onSubmit,
-
+  selectedPhoto,
+  onPhotoChange,
+  onPhotoRemove,
 }) => {
-
+  const photoInputId = useId();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     onSubmit();
   };
-
-
 
   return (
     <form className={styles.card} onSubmit={handleSubmit}>
@@ -36,10 +36,28 @@ const CreatePost = ({
           onChange={onChange}
         />
       </div>
-
-   
-    
-      
+      <input
+        id={photoInputId}
+        type="file"
+        accept="image/*"
+        className={styles.hiddenInput}
+        onChange={onPhotoChange}
+      />
+      {selectedPhoto && (
+        <div className={styles.attachmentSummary}>
+          <div className={styles.attachmentTag}>
+            <span>{selectedPhoto.name}</span>
+            <button type="button" onClick={onPhotoRemove}>
+              Remove
+            </button>
+          </div>
+          <img
+            src={selectedPhoto.url}
+            alt={selectedPhoto.name}
+            className={styles.attachmentPreview}
+          />
+        </div>
+      )}
       <hr className={styles.divider} />
       <div className={styles.actions}>
         <Button
@@ -47,7 +65,7 @@ const CreatePost = ({
           name="Photo"
           className={styles.actionBtn}
           icon={photoIcon}
-    
+          onClick={() => document.getElementById(photoInputId)?.click()}
         />
         <Button
           type="button"

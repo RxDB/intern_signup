@@ -115,9 +115,10 @@ function postsReducer(state, action) {
       };
 
     case "CREATE_POST": {
-      const text = action.payload.trim();
+      const { text, image } = action.payload;
+      const trimmedText = text.trim();
 
-      if (!text) return state;
+      if (!trimmedText && !image) return state;
 
       const newPost = {
         id: Date.now(),
@@ -125,9 +126,9 @@ function postsReducer(state, action) {
         name: "Hanif Al hafiz",
         title: "UI/UX Designer",
         timeAgo: "now",
-        content: text,
+        content: trimmedText,
         profileImage: avatar,
-        image: null,
+        image: image?.url ?? null,
         time: 0,
         likes: 0,
         isLiked: false,
@@ -202,7 +203,8 @@ export function PostsProvider({ children }) {
     posts: sortedPosts,
     sortBy: state.sortBy,
     setSortBy: (value) => dispatch({ type: "SET_SORT", payload: value }),
-    createPost: (text) => dispatch({ type: "CREATE_POST", payload: text }),
+    createPost: (text, image = null) =>
+      dispatch({ type: "CREATE_POST", payload: { text, image } }),
     toggleLike: (postId) => dispatch({ type: "TOGGLE_LIKE", payload: postId }),
     addComment: (postId, text) =>
       dispatch({ type: "ADD_COMMENT", payload: { postId, text } }),

@@ -151,7 +151,7 @@ function postsReducer(state, action) {
           return {
             ...post,
             isLiked,
-            likedBy: isLiked ? "Hanif Al hafiz" : "",
+            // likedBy: isLiked ? "Hanif Al hafiz" : "",
             likes: isLiked ? post.likes + 1 : post.likes - 1,
           };
         }),

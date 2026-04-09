@@ -7,14 +7,32 @@ import postHeartIcon from "../../../assets/postHeart.svg";
 import postLikeIcon from "../../../assets/postLike.svg";
 import shareIcon from "../../../assets/share.svg";
 import sendIcon from "../../../assets/send.svg";
+import avatar from "../../../assets/avatar.jpeg";
+import TextInput from "../../../common/TextInput/TextInput";
+import likeRed from "../../../assets/likeRed.svg"
 
-const PostCard = ({ post }) => {
+const PostCard = ({ post, id, handleLike, handleAddComment }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [commentSection, setCommentSection] = useState(false);
+  const [commentText, setCommentText] = useState("");
+
   const shouldTruncate = post.content.length > 160;
   const visibleContent =
     shouldTruncate && !isExpanded
       ? `${post.content.slice(0, 160).trimEnd()}...`
       : post.content;
+
+
+
+  const handleSubmitComment  = (e)=>{
+    e.preventDefault();
+
+    const trimmedComment = commentText.trim();
+    if(!trimmedComment) return;
+
+    handleAddComment(id,trimmedComment)
+    setCommentText("");
+  }
 
   return (
     <div className={styles.card}>
@@ -40,7 +58,7 @@ const PostCard = ({ post }) => {
 
           <div className={styles.textTime}>
             <span className={styles.profileTitle}>{post.title}</span>
-            <span className={styles.metaSeparator} aria-hidden="true"/>
+            <span className={styles.metaSeparator} aria-hidden="true" />
             <span className={styles.time}>{post.timeAgo}</span>
           </div>
         </div>
@@ -63,15 +81,17 @@ const PostCard = ({ post }) => {
         <div className={styles.actionButtons}>
           <Button
             type="button"
-            icon={likeIcon}
+            icon={post.isLiked ? likeRed: likeIcon}
             ariaLabel="Like"
             className={styles.actionBtn}
+            onClick={() => handleLike(id)}
           />
           <Button
             type="button"
             icon={commentIcon}
             ariaLabel="Comment"
             className={styles.actionBtn}
+            onClick={() => setCommentSection(!commentSection)}
           />
           <Button
             type="button"
@@ -93,9 +113,42 @@ const PostCard = ({ post }) => {
           </div>
           <span className={styles.Count}>{post.likes} </span>
           <span className={styles.metaSeparator} aria-hidden="true" />
-          <span className={styles.Count}>{post.comments} comments</span>
+          <span className={styles.Count}>{post.comments.length} comments</span>
         </div>
       </div>
+      {commentSection && (
+        <form onSubmit={handleSubmitComment} className={styles.commentSection}>
+          <div className={styles.commentBar}>
+            <img src={avatar} alt="dp" />
+            <TextInput
+              placeholder="Add a comment"
+              name={`comment-${id}`}
+              value={commentText}
+              onChange={(event) => setCommentText(event.target.value)}
+              className={styles.searchInput}
+            />
+            <button type="submit" className={styles.commentSubmit}>
+              Post
+            </button>
+          </div>
+
+          <div className={styles.commentList}>
+            {post.comments.map((comment) => (
+              <div key={comment.id} className={styles.comment}>
+                <img src={avatar} alt={comment.author} />
+                <div className={styles.commentContent}>
+                  <div className={styles.commentHeader}>
+                    <span className={styles.commentAuthor}>{comment.author}</span>
+                    <span className={styles.commentDot} aria-hidden="true" />
+                    <span className={styles.commentTime}>{comment.timeAgo}</span>
+                  </div>
+                  <p className={styles.commentText}>{comment.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </form>
+      )}
     </div>
   );
 };
